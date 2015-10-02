@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+	<title>Backbone Demo: Diablo3</title> 
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="static/backbone.js"></script>
+    <script src="static/jquery.tmpl.js"></script>
+    <script src="static/diablo3.js"></script>
+</head>
+
+<body>
+	<!-- Diablo3 App Interface --> 
+	<div id="diablo3app"> 
+ 
+      <div class="title"> 
+        <h1>Diablo3</h1> 
+      </div> 
+ 
+      <div class="content"> 
+ 
+        <div id="search"> 
+          <input id="search-hero" placeholder="What search hero tag? (ex) Sample#1234)" type="text" />
+        </div> 
+ 
+        <div id="heros"> 
+          <ul id="hero-list"></ul> 
+        </div> 
+        
+        <div id="hero"> 
+          <div id="hero-view"></div> 
+        </div> 
+      </div> 
+    </div>
+    
+    <script type="text/template" id="hero-template">
+		{{ tmpl($data) "#skillTemplate" }}
+	</script>
+	
+	<script id="skillTemplate" type="text/html">
+		<table class="talbe striped">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Age</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<ul>{{each phone}}<li>${$value}</li>{{/each}}</ul>
+			</tbody>
+		</table>
+	</script>
+</body>
+</html>
